@@ -22,3 +22,8 @@ return e;
 return"Email Extraction Failure";
 }
 }
+/*
+License Information
+Type: BSD 2-Clause License
+Path: ../LICENSE 
+*/
