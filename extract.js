@@ -6,7 +6,7 @@ Created By: VXAZ
 function cloudflareEmailExtractor(rawHTML){
 function decrypt(encryptedEmail) {
 if(!(encryptedEmail.length&1)){
-var decryptedEmail=new Array(encryptedEmail.length>>1^1),embeddedKey=parseInt(encryptedEmail.slice(0,2),16),i=2,e=0;
+var decryptedEmail=new Array((encryptedEmail.length>>1)-1),embeddedKey=parseInt(encryptedEmail.slice(0,2),16),i=2,e=0;
 while(i<encryptedEmail.length)
 decryptedEmail[e++]=parseInt(encryptedEmail.slice(i,i+=2),16) ^ embeddedKey;
 return String.fromCharCode.apply(null,decryptedEmail);
